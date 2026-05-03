@@ -31,7 +31,7 @@ This screenshot shows a triggered Microsoft Sentinel incident for a successful l
 ### 4️⃣ Detection Query
 ![Query](insert-image-link)
 
-In this step, I used a query in Microsoft Sentinel to filter authentication logs and isolate suspicious login behavior. Writing and refining queries is a key part of identifying patterns and narrowing down potential threats.
+The investigation panel provides context around a high-severity alert generated after multiple failed login attempts were followed by a successful authentication. The associated IP address and geolocation data help identify the source of the activity and support further analysis of potential credential compromise.
 
 ---
 
