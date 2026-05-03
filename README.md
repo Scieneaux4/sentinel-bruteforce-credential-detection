@@ -24,7 +24,7 @@ Here, I filtered for failed login attempts (Event ID 4625) to identify repeated 
 ### 3️⃣ Successful Login Events (Event ID 4624)
 ![Successful Logins](insert-image-link)
 
-This view shows successful login events (Event ID 4624), which are useful for comparing against failed attempts during an investigation. Looking at both successful and failed logins together helps provide better context around user activity.
+This query aggregates failed login attempts over a defined time window to identify potential brute-force attacks. By grouping authentication failures by IP address and time interval, it highlights sources generating unusually high volumes of failed logins, which may indicate malicious activity targeting the system.
 
 ---
 
