@@ -1,4 +1,4 @@
-# Microsoft Sentinel Threat Detection Lab
+D# Microsoft Sentinel Threat Detection Lab
 ---
 
 In this project, I built a SIEM lab using Microsoft Sentinel in Azure to monitor and analyze authentication activity from a Windows virtual machine. The virtual machine was intentionally exposed to the internet as a honeypot to attract and capture real-world login attempts. The goal of this lab was to simulate real attack behavior and gain hands-on experience working with logs, detecting suspicious activity, and understanding how security events are investigated in a SOC environment.
@@ -8,28 +8,28 @@ In this project, I built a SIEM lab using Microsoft Sentinel in Azure to monitor
 ## 📸 Screenshots & Walkthrough
 
 ### 1️⃣ Authentication Logs Ingested
-![Logs](insert-image-link)
+![Logs](./Microsoftevents.png)
 
 This screenshot shows Windows Security Event logs successfully ingested into Microsoft Sentinel. The logs include authentication activity such as successful (Event ID 4624) and failed (Event ID 4625) login attempts, forming the foundation for detecting suspicious behavior.
 
 ---
 
 ### 2️⃣ Failed Login Attempts (Event ID 4625)
-![Failed Logins](insert-image-link)
+![Failed Logins](./Failedattmpts.png)
 
 Here, I filtered for failed login attempts (Event ID 4625) to identify repeated authentication failures. A high volume of failed logins within a short period of time can indicate brute-force attack behavior against the system.
 
 ---
 
 ### 3️⃣ Successful Login Events (Event ID 4624)
-![Successful Logins](insert-image-link)
+![Brute Force Detection](./successbrute.png)
 
 I identified a single IP address (9.134.72.62) responsible for 38 failed login attempts followed by 14 successful authentications. This pattern strongly indicates brute-force activity, where an attacker repeatedly attempts credentials until successfully gaining access.
 
 ---
 
 ### 4️⃣ Detection Query
-![Query](insert-image-link)
+
 
 This screenshot shows a triggered Microsoft Sentinel incident for a successful login following multiple failed attempts. This detection highlights potential brute-force behavior where an attacker repeatedly attempts authentication before eventually gaining access. The alert includes relevant details such as severity, associated IP address, and event correlation, demonstrating how security analysts identify and prioritize threats in a SOC environment.
 
