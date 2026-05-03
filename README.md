@@ -1,4 +1,4 @@
-D# Microsoft Sentinel Threat Detection Lab
+# Microsoft Sentinel Threat Detection Lab
 ---
 
 In this project, I built a SIEM lab using Microsoft Sentinel in Azure to monitor and analyze authentication activity from a Windows virtual machine. The virtual machine was intentionally exposed to the internet as a honeypot to attract and capture real-world login attempts. The goal of this lab was to simulate real attack behavior and gain hands-on experience working with logs, detecting suspicious activity, and understanding how security events are investigated in a SOC environment.
@@ -29,7 +29,7 @@ I identified a single IP address (9.134.72.62) responsible for 38 failed login a
 ---
 
 ### 4️⃣ Detection Query
-
+![Detection Rule](./Detectrule.png)
 
 This screenshot shows a triggered Microsoft Sentinel incident for a successful login following multiple failed attempts. This detection highlights potential brute-force behavior where an attacker repeatedly attempts authentication before eventually gaining access. The alert includes relevant details such as severity, associated IP address, and event correlation, demonstrating how security analysts identify and prioritize threats in a SOC environment.
 
