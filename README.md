@@ -34,7 +34,7 @@ I created a KQL query to detect brute-force behavior by identifying IP addresses
 
 ---
 
-### 5. Alert / Detection Rule
+ ### 5. Security Incident Generated in Microsoft Sentinel
 ![Detection Rule](./securityalertincid.png)
 
 A scheduled analytics rule was configured in Microsoft Sentinel to trigger alerts when suspicious login behavior is detected. This automates detection and simulates real SOC alerting workflows.
