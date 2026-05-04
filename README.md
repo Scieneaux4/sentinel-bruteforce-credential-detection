@@ -14,7 +14,7 @@ This screenshot shows Windows Security Event logs being successfully ingested in
 ---
 
 ### 2. Failed Login Attempts (Event ID 4625)
-![Failed Logins](Failedattempts.png)
+![Failed Logins](Failedattmpts.png)
 
 In this step, I filtered specifically for failed login attempts (Event ID 4625) to look for patterns of repeated authentication failures. What stood out was the number of attempts coming from the same IP addresses within short time windows. This kind of behavior is not typical for normal users and is commonly associated with brute-force attacks, where an attacker repeatedly tries different credentials hoping to gain access. By narrowing the data down this way, I was able to quickly identify which IPs were behaving suspiciously and worth investigating further.
 
