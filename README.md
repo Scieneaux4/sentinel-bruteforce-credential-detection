@@ -13,21 +13,21 @@ This screenshot shows Windows Security Event logs being successfully ingested in
 
 ---
 ### 2. Failed Login Attempts (Event ID 4625)
-![Failed Logins](Failedattmpts.png)
+![Failed Logins](screenshots/Failedattmpts.png)
 
 In this step, I filtered specifically for failed login attempts (Event ID 4625) to identify patterns of repeated authentication failures. The results showed multiple attempts coming from the same IP addresses within short time windows, which is not typical for normal user behavior. This pattern is commonly associated with brute force attacks, where an attacker repeatedly tries different credentials to gain access. By narrowing the data in this way, I was able to quickly identify suspicious IP addresses that required further investigation.
 
 ---
 
 ### 3. Successful Login Events (Event ID 4624)
-![Successful Brute Force](successbrute.png)
+![Successful Brute Force](screenshots/successbrute.png)
 
 Here, I expanded the analysis by including successful login events (Event ID 4624) alongside failed attempts. This allowed me to identify a key pattern where a single IP address generated multiple failed login attempts and then eventually succeeded. This sequence is a strong indicator of a successful brute force attack, where the attacker is able to guess the correct credentials after repeated attempts. Correlating failed and successful logins provides stronger evidence of compromise than failed attempts alone.
 
 ---
 
 ### 4. Detection Query
-![Detection Query](./Detectrule.png)
+![Detection Query](screenshots/./Detectrule.png)
 
 I created a KQL-based detection rule in Microsoft Sentinel to identify IP addresses with multiple failed login attempts followed by at least one successful login within a defined time window. This rule automates detection of potential brute-force attacks and generates alerts for further investigation.
 
