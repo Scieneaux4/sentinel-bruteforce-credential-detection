@@ -30,7 +30,7 @@ This query looks for suspicious login activity by analyzing Windows Security Eve
 ### 4. Detection Query
 ![Detection Query](screenshots/./Detectrule.png)
 
-I created a KQL-based detection rule in Microsoft Sentinel to identify IP addresses with multiple failed login attempts followed by at least one successful login within a defined time window. This rule automates detection of potential brute-force attacks and generates alerts for further investigation.
+I created a KQL-based detection rule in Microsoft Sentinel to identify IP addresses with multiple failed login attempts followed by at least one successful login within a defined time window. This rule automates detection of suspicious login patterns and generates alerts for further investigation.
 
 ---
 
